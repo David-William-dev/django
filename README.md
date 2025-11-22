@@ -69,7 +69,7 @@ python manage.py migrate
 Install:
 
 ```bash
-pip install mysqlclient
+pip install pymysql
 ```
 
 Update settings:
