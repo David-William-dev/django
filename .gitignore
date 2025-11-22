@@ -1,0 +1,24 @@
+# Virtual environments
+venv/
+env/
+django/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# SQLite database
+db.sqlite3
+
+# Django logs
+*.log
+
+# VS Code settings
+.vscode/
+
+# Local static/media files
+staticfiles/
+media/
+
+# OS files
+.DS_Store
