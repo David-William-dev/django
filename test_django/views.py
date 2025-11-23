@@ -5,7 +5,7 @@ import logging
 from .models import Post,AboutPage
 from django.http import Http404
 from django.core.paginator import Paginator
-from .forms import ContactForm
+from .forms import ContactForm,PostForm
 
 blog_title = "David post"
 
@@ -100,6 +100,30 @@ def contactPage(req):
         template_name="html/contact.html",
     )
 
+def createNewPostPage(req):
+    if req.method == "POST":
+        new_post_form = PostForm(req.POST)
+        logger = logging.getLogger("TESTING")
+        if new_post_form.is_valid():
+            title = new_post_form.cleaned_data['title']
+            content = new_post_form.cleaned_data['content']
+            img = new_post_form.cleaned_data['img']
+            category = new_post_form.cleaned_data['category']
+            Post.objects.create(
+                title=title,
+                content=content,
+                img=img,
+                category=category
+            )
+            logger.debug(f"new post created with title {title} ")
+        else :
+            logger.debug("new post form validation is failed ")
+            
+    return render(
+        request=req,
+        template_name="html/create_post.html",
+        context={"form":PostForm()}
+    )
 
 def aboutPage(req):
     about = AboutPage.objects.first()
