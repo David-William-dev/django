@@ -16,3 +16,5 @@ k = ''
 while (ord('q')!=k):
     k = ord(input("enter value = "))
     print(k)
+    
+print("you exited the loop")
