@@ -22,3 +22,6 @@ media/
 
 # OS files
 .DS_Store
+
+# README files
+*.md
