@@ -1,0 +1,35 @@
+{% extends 'html/base.html' %} {% block content %}
+<div class="container-fluid">
+	<div class="d-flex justify-content-center mt-5">
+		<div class="d-flex gap-3 flex-column">
+			<h3>Create Post</h3>
+			<form method="post" class="row g-3">
+				{% csrf_token %} {{ form.non_field_errors }}
+				<div class="col-md-6">
+					<label for="title" class="form-label">Title</label>
+					<input type="text" class="form-control" id="title" name="title" required />
+					{{ form.title.errors }}
+				</div>
+				<div class="col-md-6">
+					<label for="category" class="form-label">Category</label>
+					{{ form.category }}
+					{{ form.category.errors }}
+				</div>
+				<div class="col-md-6">
+					<label for="url" class="form-label">Image URL</label>
+					<input type="url" class="form-control" id="url" name="url" required />
+					{{ form.url.errors }}
+				</div>
+				<div class="col-12">
+					<label for="content" class="form-label">Content</label>
+					<textarea class="form-control" id="content" name="content" rows="4" required></textarea>
+					{{ form.content.errors }}
+				</div>
+				<div class="col-12">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
