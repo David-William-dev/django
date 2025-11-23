@@ -25,7 +25,7 @@ cd your-django-blog
 
 ### 2️⃣ Create & Activate Virtual Environment
 
-#### On Linux / macOS:
+#### On Linux / macOS 
 
 ```bash
 python3 -m venv venv
