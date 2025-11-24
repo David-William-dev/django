@@ -1,5 +1,7 @@
 # 📝 Django Blog Application
 
+![Status](https://img.shields.io/badge/Status-Under%20Development-yellow)
+
 A simple, clean, and modular **Django Blog** project built using Django,
 Django Templates, and Django ORM.\
 Supports both **SQLite** (default) and **MySQL**, and includes a
