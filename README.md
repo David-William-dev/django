@@ -9,10 +9,9 @@ Supports both **SQLite** (default) and **MySQL**, and includes a
 
 ## 🌟 Features
 
--   Create, edit, delete blog posts\
+-   Create✅, edit❌, delete❌ blog posts\
 -   Category-based filtering\
 -   Responsive UI using Django Templates\
--   Django Admin customization\
 -   SQLite (default) or MySQL support\
 -   Reusable population script for seeding initial data\
 -   Clean and modular folder structure
@@ -46,7 +45,7 @@ Supports both **SQLite** (default) and **MySQL**, and includes a
 
 ``` bash
 git clone https://github.com/yourusername/your-django-blog.git
-cd your-django-blog
+cd django
 ```
 
 ### 2️⃣ Create & Activate Virtual Environment
@@ -124,7 +123,7 @@ python manage.py migrate
 Run:
 
 ``` bash
-python manage.py pop_category
+python manage.py pop_category pop_data
 ```
 
 Ensure `management/` and `commands/` contain `__init__.py`.
