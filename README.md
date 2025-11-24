@@ -45,7 +45,7 @@ Supports both **SQLite** (default) and **MySQL**, and includes a
 ### 1️⃣ Clone the repository
 
 ``` bash
-[git clone https://github.com/yourusername/your-django-blog.git](https://github.com/David-William-dev/django.git)
+git clone https://github.com/yourusername/your-django-blog.git
 cd your-django-blog
 ```
 
